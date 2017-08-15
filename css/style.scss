@@ -10,7 +10,7 @@ html{
 		nav{
 			width: 100%;
 			min-height: 50px;
-			border-bottom: 1px solid #d6d6d6;
+			// border-bottom: 1px solid #d6d6d6;
 			position: fixed;
 			top: 0;
 			background-color: white;
@@ -35,9 +35,16 @@ html{
 					flex: 1;
 					text-align: center;
 					color: black;
-					&:visited{
-						color: black;
+					// &:visited{
+					// 	color: black;
+					// }
+					&:hover{
+						color: orange;
 					}
+				}
+				.active{
+					color: orange;
+					border-bottom: 3px solid orange;
 				}
 				@media screen and (min-width: 768px){
 			    	float: right;	
