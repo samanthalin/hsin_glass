@@ -1,0 +1,133 @@
+@import url(reset.css);
+
+html{
+	box-sizing: border-box;
+	background-color: white;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	color: black;
+	body{
+		nav{
+			width: 100%;
+			min-height: 50px;
+			border-bottom: 1px solid #d6d6d6;
+			position: fixed;
+			top: 0;
+			background-color: white;
+			z-index: 9999;
+			.logo{
+				width: 195px;
+			    height: 50px;
+			    background-image: url(../img/logo.png);
+			    background-size: contain;
+			    margin: auto;
+			    background-repeat: no-repeat;
+			    @media screen and (min-width: 768px){
+			    	float: left;
+			    }
+			}
+			.menu{
+				display: flex;
+				.menu-item{
+					display: inline-block;
+					padding: 13px;
+					font-size: 16px;
+					flex: 1;
+					text-align: center;
+					color: black;
+					&:visited{
+						color: black;
+					}
+				}
+				@media screen and (min-width: 768px){
+			    	float: right;	
+			    	width: 300px;
+			    }
+			}
+		}//nav
+		.track{
+			position: absolute;
+			width: 80px;
+			height: 1471px;
+			left: 50%;
+			margin-left: -40px;
+			background-image: url(../img/dash.png);
+			background-size: contain;
+			background-repeat-y: repeat;
+			.ball{
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				width: 60px;
+				height: 60px;
+				margin-left: -30px;
+				img{
+					width: 100%;
+				}
+			}//ball
+		}//track
+		.banner{
+			position: relative;
+			height: 450px;
+			width: 100%;
+			background-color: gray;
+			z-index: 100;
+		}//banner
+		.container{
+			background-color: #ffe5d2;
+			width: 100%;
+			padding: 20px 0px;
+			&:after{
+				content: '';
+				width: 100%;
+				display: block;
+				clear: both;
+			}
+			.content{
+				width: 90%;
+				margin: auto;
+				max-width: 705px;
+				.box{
+					width: 90%;
+					margin: auto;
+					max-width: 350px;
+					border: 1px solid black;
+					border-radius: 10px;
+					min-height: 150px;
+					margin-bottom: 20px;
+					background-color: white;
+					@media screen and (min-width: 768px){
+						margin:0;
+						max-width: 265px;
+						@media screen and (min-width: 992px){
+
+						}
+					}
+				}//box
+				.left{
+					@media screen and (min-width: 768px){
+						// margin-left: -420px;
+						// margin-right: 200px;
+						float: left;
+						margin-bottom: 175px;
+						clear: both;
+					}
+				}
+				.right{
+					@media screen and (min-width: 768px){
+						float: right;
+						margin-top: 145px;
+					}
+				}
+			}
+			@media screen and (min-width: 768px){
+				
+			}
+		}//container
+		footer{
+			width: 100%;
+			height: 200px;
+			background-color: gray;
+		}
+	}
+}
