@@ -32,14 +32,13 @@ $(document).ready(function () {
 		// $('.content .left').hide();
 		// $('.content .right').hide();
 		$('video').addClass('animated');
-		var scene1 = new ScrollMagic.Scene({ triggerElement: "#trigger1", duration: 450 })
-			// animate color and top border in relation to scroll position
-			.setClassToggle("#trigger1", "slideIn")
-			.addIndicators()
-			.addTo(controller);
-		// $('video').addClass('fadeIn')
-	});
 
+	});
+	var scene1 = new ScrollMagic.Scene({ triggerElement: "#trigger1", duration: 450 })
+		// animate color and top border in relation to scroll position
+		.setClassToggle("#trigger1", "zoomIn")
+		.addIndicators()
+		.addTo(controller);
 
 
 });
