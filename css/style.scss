@@ -85,37 +85,6 @@ html{
 	color: black;
 	body{
 		background:transparent url('../img/bg.png') left top repeat;
-		.scroll-nav{
-			// display: none;
-			width: 100%;
-			height: 65px;
-			background-color: white;
-			position: fixed;
-			z-index: 9999;
-			.nav-frame{
-				width: 1080px;
-				margin: auto;
-				.logo{
-					width: 254px;
-					float: left;
-					margin-top: 5px;
-				}
-				.menu{
-					float: right;
-					display: flex;
-					.menu-item{
-						flex: 1;
-						font-size: 17px;
-						color: $blue;
-						padding: 19px;
-					}
-					.active{
-						border-bottom: 5px solid $blue;
-					}//active
-				}
-			}
-		}
-
 		.track{
 			width: 100px;
 			position: absolute;
@@ -181,6 +150,41 @@ html{
 						border-bottom: 3px solid white;
 					}//active
 				}//int-nav
+				.scroll-nav{
+					// display: none;
+					width: 100%;
+					height: 65px;
+					background-color: white;
+					position: fixed;
+					left: 0;
+					z-index: 9999;
+					.nav-frame{
+						width: 1080px;
+						margin: auto;
+						.logo{
+							width: 254px;
+							float: left;
+							margin-top: 5px;
+						}
+						.menu{
+							float: right;
+							display: flex;
+							margin-top: 0;
+							.menu-item{
+								flex: 1;
+								font-size: 17px;
+								color: $blue;
+								padding: 19px;
+								&:hover{
+									border-bottom: 5px solid $blue;
+								}
+							}
+							.active{
+								border-bottom: 5px solid $blue;
+							}//active
+						}
+					}
+				}
 				.drag{
 					position: absolute;
 					width: 100px;
