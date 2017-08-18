@@ -59,6 +59,21 @@
   }
 }
 
+@keyframes shining {
+  0% {  opacity: 0.7; box-shadow: 0 0 30px white;; }
+  50% {   opacity: 1; box-shadow: 0 0 30px white; }
+  100% {  opacity: 0.7; box-shadow: 0 0 30px white;; }   
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 $blue: #2E94B9;
 $red: #FD5959;
 
@@ -168,17 +183,18 @@ html{
 				}//int-nav
 				.drag{
 					position: absolute;
-					width: 75px;
-					right: 20px;
+					width: 100px;
+					right: 0px;
 					bottom: 150px;
+					animation-name: pulse;
+					animation-duration: 1s;
+					animation-iteration-count: infinite;
 				}
 				.drop{
 					position: absolute;
-					width: 133px;
-					right: 40px;
+					width: 154px;
+					right: 27px;
 					bottom: 300px;
-				}
-				.warning {
 					animation-name: pulse;
 					animation-duration: 1s;
 					animation-iteration-count: infinite;
@@ -187,6 +203,11 @@ html{
 					position: absolute;
 					right: 95px;
 					bottom: 100px;
+					cursor: pointer;
+					&:hover{
+						transform: scale(1.1);
+						transition: transform 0.1s linear;
+					}
 					img{
 						width: 60px;
 					}
@@ -206,9 +227,10 @@ html{
 				    height: 74px;
 				    border-radius: 37px;
 				}
-				.drop-place-hint{
-					background-color: white;
-					opacity: 0.1;
+				.shining{
+					animation-name: shining;
+					animation-duration: 1s;
+					animation-iteration-count: infinite;
 				}
 			}//banner
 		}//header
