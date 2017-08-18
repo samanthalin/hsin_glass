@@ -33,9 +33,11 @@
   65% {
     transform: translate(-536px, 19px); }
   70% {
-    transform: translate(-562px, 84px); }
+    transform: translate(-562px, 84px);
+    opacity: 1; }
   100% {
-    transform: translate(-562px, 84px); } }
+    transform: translate(-562px, 84px);
+    opacity: 0; } }
 html {
   box-sizing: border-box;
   background-color: white;
