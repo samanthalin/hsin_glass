@@ -1,11 +1,9 @@
 $(document).ready(function () {
-// <<<<<<< HEAD
-// =======
+	var a = $('.track').height();
+	$('#mysvg').height(a-20);
 	$(document).animateScroll();
 	var doc = document.documentElement;
 	doc.setAttribute('data-useragent', navigator.userAgent);
-// >>>>>>> ad6f72f8cc6faac665ffa0d4bbf2b48b57cb3082
-	// var controller = new ScrollMagic.Controller();
 	$('.menu-item').click(function () {
 		$('.menu a').removeClass('active');
 		$(this).addClass('active');
@@ -31,24 +29,85 @@ $(document).ready(function () {
 		$('#process').show();
 		var h = $('#process').height();
 		$('.track').height(h);
+		//console.log(a)
 		// $('.content .left').hide();
 		// $('.content .right').hide();
-//<<<<<<< HEAD
-		//$('video').addClass('animated');
-
+		
+		return h;
 	});
-	// var scene1 = new ScrollMagic.Scene({ triggerElement: "#trigger1", duration: 450 })
-	// 	// animate color and top border in relation to scroll position
-	// 	.setClassToggle("#trigger1", "zoomIn")
-	// 	.addIndicators()
-	// 	.addTo(controller);
-//=======
+	
 
-//>>>>>>> ad6f72f8cc6faac665ffa0d4bbf2b48b57cb3082
+function positionTheDot(h) {
+	
+	  // What percentage down the page are we document.body.scrollTop ? 
+	  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+		
+	  // Get path length
+	  var path = document.getElementById("theMotionPath");
+	  var pathLen = path.getTotalLength();
+	  
+	  // Get the position of a point at <scrollPercentage> along the path.
+	  var pt = path.getPointAtLength(scrollPercentage * pathLen);
+	  //console.log(pt)
+	  // Position the red dot at this point
+	  var dot = document.getElementById("dot");
+	  dot.setAttribute("transform", "translate("+ pt.x + "," + pt.y + ")");
+	  
+	};
+	
+	// Update dot position when we get a scroll event.
+	window.addEventListener("scroll", positionTheDot);
+	
+	// Set the initial position of the dot.
+	positionTheDot();
 
-	});
-	// var scene1 = new ScrollMagic.Scene({ triggerElement: "#trigger1", duration: 450 })
-	// 	// animate color and top border in relation to scroll position
-	// 	.setClassToggle("#trigger1", "fadeIn")
-	// 	.addTo(controller);
+	// target elements with the "draggable" class
+interact('.draggable')
+.draggable({
+  // enable inertial throwing
+  inertia: true,
+  // keep the element within the area of it's parent
+  restrict: {
+	restriction: "parent",
+	endOnly: true,
+	elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+  },
+
+  // call this function on every dragmove event
+  onmove: dragMoveListener,
+  // call this function on every dragend event
+  onend: function (event) {
+	var textEl = event.target.querySelector('p');
+
+	textEl && (textEl.textContent =
+	  'moved a distance of '
+	  + (Math.sqrt(event.dx * event.dx +
+				   event.dy * event.dy)|0) + 'px');
+  }
+});
+var ball = document.querySelector('.draggable')
+ball.addEventListener('click', function(e){
+  console.log('show drop here')
+})
+function dragMoveListener (event) {
+  //console.log('show drop here')
+  var target = event.target,
+	  // keep the dragged position in the data-x/data-y attributes
+	  x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+	  y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+  // translate the element
+  target.style.webkitTransform =
+  target.style.transform =
+	'translate(' + x + 'px, ' + y + 'px)';
+
+  // update the posiion attributes
+  target.setAttribute('data-x', x);
+  target.setAttribute('data-y', y);
+}
+
+// this is used later in the resizing demo
+window.dragMoveListener = dragMoveListener;
+
+});
 

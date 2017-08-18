@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+        <link rel="import" id="header "crossOrigin="anonymous" href="http://crossme.okz.io/https://okz.io/project/hsinchu-glass-2017/template-header.html">
+        <link rel="import" id="body" crossOrigin="anonymous" href="http://crossme.okz.io/https://okz.io/project/hsinchu-glass-2017/template-index.html">
+    <script>
+       
+        var link = document.querySelectorAll('link[rel="import"] ');
+        console.log(link)
+        var templateHeader = link["0"].import.querySelector('template');
+        var templateBody = link["1"].import.querySelector('template');
+        
+        var cloneHeader = document.importNode(templateHeader.content, true)
+        var cloneBody = document.importNode(templateBody.content, true)
+        document.body.appendChild(cloneBody)
+        document.body.appendChild(cloneHeader)
+        
+    </script>
+</body>
+</html>
