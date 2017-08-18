@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	// on init
-	
+
 	$('html,body').scrollTop(0);
 	var body = document.querySelector('body')
 	var mysvg1 = document.querySelector('#mysvg1')
@@ -9,16 +9,17 @@ $(document).ready(function () {
 	body.style.overflow = 'hidden'
 	$('.scroll-nav').hide();
 	mysvg2.style.display = 'none';
+	$('.drop').hide();
 	// on scroll
-	
+
 	$(window).scroll(function () {
 		if ($(window).scrollTop() < 10) {
 			$('.scroll-nav').hide()
 			$('.int-nav').show();
-			
+
 		} else {
 			$('.scroll-nav').show()
-			$('.int-nav').hide ();
+			$('.int-nav').hide();
 		}
 	})
 
@@ -116,10 +117,16 @@ $(document).ready(function () {
 		});
 	var ball = document.querySelector('.draggable')
 	ball.addEventListener('click', function (e) {
+		$('.drag').hide();
+		$('.drop').show();
+		$('.drop-place').addClass('shining');
 		console.log('show drop here')
 	})
 
 	function dragMoveListener(event) {
+		$('.drag').hide();
+		$('.drop').show();
+		$('.drop-place').addClass('shining');
 		//console.log('show drop here')
 		var target = event.target,
 			// keep the dragged position in the data-x/data-y attributes
@@ -171,6 +178,8 @@ $(document).ready(function () {
 			// event.relatedTarget.textContent = 'Dropped';
 			event.relatedTarget.classList.add('animation')
 			console.log('droped in')
+			$('.drop').hide();
+			$('.drop-place').removeClass('shining');
 			setTimeout(hideBall, 4500)
 		},
 		ondropdeactivate: function (event) {
@@ -187,5 +196,6 @@ $(document).ready(function () {
 		body.style.overflow = 'scroll'
 		ball.style.display = 'none';
 		mysvg1.style.display = 'block';
+
 	}
 });
