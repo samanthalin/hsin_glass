@@ -1,13 +1,22 @@
 $(document).ready(function () {
-	// on init
-
-	$('html,body').scrollTop(0);
+	
 	var body = document.querySelector('body')
 	var mysvg1 = document.querySelector('#mysvg1')
 	var mysvg2 = document.querySelector('#mysvg2')
+	// on init
 
-	body.style.overflow = 'hidden'
-	$('.scroll-nav').hide();
+	$('html,body').scrollTop(0);
+
+	if($(window).scrollTop() > 0) {
+		body.style.overflow = 'scroll'
+		$('html,body').scrollTop(0);
+	} else {
+		body.style.overflow = 'hidden'
+		$('.scroll-nav').hide();
+	}
+	
+
+
 	mysvg2.style.display = 'none';
 	$('.drop').hide();
 	// on scroll
