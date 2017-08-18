@@ -175,7 +175,23 @@ html{
 		// 	display: none;
 		// }
 		.track{
-			display: none;
+			width: 100px;
+			position: absolute;
+			left: 50%;
+			top: 655px;
+			height: 3100px;
+			margin-left: -50px;
+			background-image: url(../img/dash.png);
+			background-repeat: repeat-y;
+			background-size: contain;
+			.ball{
+				position: fixed;
+				top: 50%;
+				left: calc(50% - 30px);
+				img{
+					width: 60px;
+				}
+			}
 		}
 		header{
 			width: 100%;
@@ -238,13 +254,13 @@ html{
 				width: 1080px;
 				margin: auto;
 				padding: 150px 33px;
-				height: 3200px;
+				height: 2800px;
 				.box{
 					width: 373px;
 					background-color: white;
 					border-radius: 22px;
 					padding: 2%;
-					box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3); 
+					box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
 				}
 				.left{
 					float: left;
@@ -252,7 +268,7 @@ html{
 				}
 				.right{
 					float: right;
-					//clear: both;
+					// clear: both;
 				}
 				.p1{
 					width: 83px;
@@ -271,30 +287,36 @@ html{
 				}
 				.p3{
 					width: 374px;
+					margin-top: 140px;
+    				margin-right: 60px;
 					img{
 						width: 100%;
 					}
 				}
 				.p4{
 					width: 432px;
+					margin-top: 190px;
 					img{
 						width: 100%;
 					}
 				}
 				.p5{
 					width: 373px;
+					margin-top: -125px;
 					img{
 						width: 100%;
 					}
 				}
 				.p6{
 					width: 369px;
+					margin-top: 145px;
 					img{
 						width: 100%;
 					}
 				}
 				.p7{
 					width: 499px;
+					margin-top: 145px;
 					img{
 						width: 100%;
 					}
@@ -302,15 +324,32 @@ html{
 				.h3{
 					margin-top: 127px;
 				}
+				.h4{
+					margin-top: -85px;
+				}
+				.h5{
+					margin-top: 85px;
+				}
+				.h6{
+					margin-top: 170px;
+				}
+				.h7{
+					margin-top: -38px;
+				}
+				.h8{
+					margin-top: 107px;
+				}
+				.h9{
+					margin-top: 300px;
+				}
+				.h10{
+					margin-top: 190px;
+				}
+				.h11{
+					margin-top: 120px;
+				}
 				.h12{
-					position: relative;
-					&:after{
-						content: ' ';
-						position: absolute;
-						width: 100%;
-						clear: both;
-						top: 20px;
-					}
+					margin-top: -180px;
 				}
 			}
 		}

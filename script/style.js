@@ -22,9 +22,7 @@ $(document).ready(function () {
 		$('#process').hide();
 		$('#history').show();
 		var h = $('#history').height();
-		var nh = $('nav').height();
-		var bh = $('.banner').height();
-		$('.track').height(h + nh + bh);
+		$('.track').height(h);
 
 	});
 
@@ -32,9 +30,7 @@ $(document).ready(function () {
 		$('#history').hide();
 		$('#process').show();
 		var h = $('#process').height();
-		var nh = $('nav').height();
-		var bh = $('.banner').height();
-		$('.track').height(h + nh + bh);
+		$('.track').height(h);
 		// $('.content .left').hide();
 		// $('.content .right').hide();
 //<<<<<<< HEAD
