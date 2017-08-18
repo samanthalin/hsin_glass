@@ -192,6 +192,7 @@ $(document).ready(function () {
 
 	function hideBall() {
 		console.log('hideball')
+		$('#dropzone').removeClass('dropzone')
 		var ball = document.querySelector('.banner .ball')
 		body.style.overflow = 'scroll'
 		ball.style.display = 'none';
