@@ -6,38 +6,40 @@
   5% {
     transform: translate(-113px, -555px); }
   15% {
-    transform: translate(-643px, -555px); }
+    transform: translate(-638px, -555px);
+    border: 1px solid red; }
   20% {
-    transform: translate(-643px, -443px); }
+    transform: translate(-638px, -437px) rotate(0);
+    border: 1px solid orange; }
   25% {
-    transform: translate(-489px, -402px); }
+    transform: translate(-484px, -355px) rotate(120deg);
+    border: 1px solid yellow; }
   30% {
-    transform: translate(-579px, -287px); }
+    transform: translate(-481px, -288px) rotate(80deg);
+    border: 1px solid green; }
   32% {
-    transform: translate(-573px, -274px); }
-  35% {
-    transform: translate(-605px, -213px); }
+    transform: translate(-508px, -283px) rotate(20deg);
+    border: 1px solid blue; }
   36% {
-    transform: translate(-623px, -217px); }
+    transform: translate(-495px, -231px) rotate(70deg);
+    border: 1px solid red; }
   39% {
-    transform: translate(-573px, -274px); }
+    transform: translate(-541px, -184px) rotate(-170deg);
+    border: 1px solid orange; }
   42% {
-    transform: translate(-635px, -204px); }
+    transform: translate(-527px, -146px) rotate(-130deg);
+    border: 1px solid yellow; }
   45% {
-    transform: translate(-608px, -147px); }
+    transform: translate(-484px, -76px) rotate(-70deg);
+    border: 1px solid green; }
   48% {
-    transform: translate(-598px, -147px); }
+    transform: translate(-452px, -49px) rotate(-10deg);
+    border: 1px solid blue; }
   51% {
-    transform: translate(-608px, -147px); }
-  60% {
-    transform: translate(-565px, -74px); }
-  65% {
-    transform: translate(-536px, 19px); }
-  70% {
-    transform: translate(-562px, 84px);
-    opacity: 1; }
+    transform: translate(-451px, 85px) rotate(50deg);
+    border: 1px solid purple; }
   100% {
-    transform: translate(-562px, 84px);
+    transform: translate(-451px, 85px) rotate(50deg);
     opacity: 0; } }
 @keyframes shining {
   0% {
@@ -72,12 +74,6 @@ html {
       background-image: url(../img/dash.png);
       background-repeat: repeat-y;
       background-size: contain; }
-      html body .track .ball {
-        position: fixed;
-        top: 50%;
-        left: calc(50% - 30px); }
-        html body .track .ball img {
-          width: 60px; }
     html body header {
       width: 100%;
       height: 655px;
@@ -121,7 +117,8 @@ html {
           background-color: white;
           position: fixed;
           left: 0;
-          z-index: 9999; }
+          z-index: 9999;
+          box-shadow: 0 2px 1px rgba(0, 0, 0, 0.12); }
           html body header .banner .scroll-nav .nav-frame {
             width: 1080px;
             margin: auto; }
@@ -171,7 +168,7 @@ html {
         html body header .banner .animation {
           transform: translate(-450px, 87px);
           animation-name: play;
-          animation-duration: 5s;
+          animation-duration: 50s;
           animation-iteration-count: 1;
           transition-timing-function: linear; }
         html body header .banner .drop-place {

@@ -195,7 +195,7 @@ $(document).ready(function () {
 			console.log('droped in')
 			$('.drop').hide();
 			$('.drop-place').removeClass('shining');
-			setTimeout(hideBall, 4500)
+			// setTimeout(hideBall, 4500)
 		},
 		ondropdeactivate: function (event) {
 			// remove active dropzone feedback
