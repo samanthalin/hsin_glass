@@ -8,10 +8,12 @@
 	<title>玻璃工藝之旅</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.min.css">
-	<script src="script/jquery-3.2.1.min.js"></script>
+	<script src="script/jquery.min.js"></script>
+	<script src="script/TweenMax.min.js"></script>
+	<script src="script/ScrollToPlugin.min.js"></script>
 	<script src="script/ScrollMagic.min.js"></script>
-	<script src="script/debug.addIndicators.min.js"></script>
-	<script src="script/wow.min.js"></script>
+	<script src="script/animate-scroll.js"></script>
+>>>>>>> ad6f72f8cc6faac665ffa0d4bbf2b48b57cb3082
 	<script src="script/style.js"></script>
 </head>
 
@@ -50,16 +52,62 @@
 
 	<div id="process" class="container">
 		<div class="content">
-			<video id="trigger1" src="https://okz.io/project/hsinchu-glass-2017/video/噴砂.mp4" class="left"></video>
-			<video id="trigger1" src="https://okz.io/project/hsinchu-glass-2017/video/實心技法%20.mp4" class="right"></video>
-			<video id="trigger2" src="https://okz.io/project/hsinchu-glass-2017/video/彩繪.mp4" class="left"></video>
-			<video id="trigger2" src="https://okz.io/project/hsinchu-glass-2017/video/拉絲技法.mp4" class="right"></video>
-			<video id="trigger3" src="https://okz.io/project/hsinchu-glass-2017/video/琉璃珠.mp4" class="left"></video>
-			<video id="trigger3" src="https://okz.io/project/hsinchu-glass-2017/video/空心技法.mp4" class="right"></video>
-			<video id="trigger4" src="https://okz.io/project/hsinchu-glass-2017/video/窯爐吹製.mp4" class="left"></video>
-			<video id="trigger4" src="https://okz.io/project/hsinchu-glass-2017/video/脫臘.mp4" class="right"></video>
-			<video id="trigger5" src="https://okz.io/project/hsinchu-glass-2017/video/資源回收.mp4" class="left"></video>
-			<video id="trigger5" src="https://okz.io/project/hsinchu-glass-2017/video/霓虹.mp4" class="right"></video>
+
+			<div class="left" data-animate-scroll='{"rotationX":"15", "alpha": "0", "duration": "1","scaleX": "1.2"}'>
+				<video controls>
+					<source autostart="false" type="video/mp4" src="https://okz.io/project/hsinchu-glass-2017/video/噴砂.mp4">
+				</video>
+			</div>
+			<div class="right" data-animate-scroll='{"rotationX":"15", "alpha": "0", "duration": "1","scaleX": "1.2"}'>
+				<video controls>
+					<source autostart="false" type="video/mp4" src="https://okz.io/project/hsinchu-glass-2017/video/實心技法%20.mp4">
+				</video>
+			</div>
+			<div class="left" data-animate-scroll='{"rotationX":"15", "alpha": "0", "duration": "1","scaleX": "1.2"}' class="content"
+			 class="left">
+				<video controls>
+					<source autostart="false" type="video/mp4" src="https://okz.io/project/hsinchu-glass-2017/video/彩繪.mp4">
+				</video>
+			</div>
+			<div class="right" data-animate-scroll='{"rotationX":"15", "alpha": "0", "duration": "1","scaleX": "1.2"}'>
+				<video controls>
+					<source autostart="false" type="video/mp4" src="https://okz.io/project/hsinchu-glass-2017/video/拉絲技法.mp4">
+				</video>
+			</div>
+			<div class="left" data-animate-scroll='{"rotationX":"15", "alpha": "0", "duration": "1","scaleX": "1.2"}' class="content"
+			 class="left">
+				<video controls>
+					<source autostart="false" type="video/mp4" src="https://okz.io/project/hsinchu-glass-2017/video/琉璃珠.mp4">
+				</video>
+			</div>
+			<div class="right" data-animate-scroll='{"rotationX":"15", "alpha": "0", "duration": "1","scaleX": "1.2"}'>
+				<video controls>
+					<source autostart="false" type="video/mp4" src="https://okz.io/project/hsinchu-glass-2017/video/空心技法.mp4">
+				</video>
+			</div>
+			<div class="left" data-animate-scroll='{"rotationX":"15", "alpha": "0", "duration": "1","scaleX": "1.2"}' class="content"
+			 class="left">
+				<video controls>
+					<source autostart="false" type="video/mp4" src="https://okz.io/project/hsinchu-glass-2017/video/窯爐吹製.mp4">
+				</video>
+			</div>
+			<div class="right" data-animate-scroll='{"rotationX":"15", "alpha": "0", "duration": "1","scaleX": "1.2"}'>
+				<videocontrols>
+					<source autostart="false" type="video/mp4" src="https://okz.io/project/hsinchu-glass-2017/video/脫臘.mp4">
+					</video>
+			</div>
+			<div class="left" data-animate-scroll='{"rotationX":"15", "alpha": "0", "duration": "1","scaleX": "1.2"}' class="content"
+			 class="left">
+				<video controls>
+					<source autostart="false" type="video/mp4" src="https://okz.io/project/hsinchu-glass-2017/video/資源回收.mp4">
+				</video>
+			</div>
+			<div class="right" data-animate-scroll='{"rotationX":"15", "alpha": "0", "duration": "1","scaleX": "1.2"}'>
+				<video controls>
+					<source autostart="false" type="video/mp4" src="https://okz.io/project/hsinchu-glass-2017/video/霓虹.mp4">
+				</video>
+			</div>
+>>>>>>> ad6f72f8cc6faac665ffa0d4bbf2b48b57cb3082
 		</div>
 	</div>
 
@@ -68,12 +116,6 @@
 		Copyright 2017
 	</footer>
 
-	<script>
-		var windowY = window.scrollY
-		var screenY = window.screenY
-		var sbHeight = window.innerHeight * (window.innerHeight / document.body.offsetHeight);
-		console.log(sbHeight)
-	</script>
 </body>
 
 </html>
