@@ -2,24 +2,60 @@
 
 @keyframes play {
   0% {
-    transform: translate(0);
+    transform: translate(-113px, -174px);
+    // transform: rotate(0);
   }
   5% {
-    transform: translate(0, -500px);
+    transform: translate(-113px, -555px);
   }
-  10% {
-  	transform: translate(-550px, -500px);
+  15% {
+  	transform: translate(-643px, -555px);
   }
   20%{
-  	transform: translate(-550px, -300px);
+  	transform: translate(-643px, -443px);
   }
-  40%{
-  	transform: translate(-440px, -40px);
+  25%{
+  	transform: translate(-489px, -402px);
+  }
+  30%{
+  	transform: translate(-579px, -287px);
+  }
+  32%{
+  	transform: translate(-573px, -274px);
+  }
+  35%{
+  	transform: translate(-605px, -213px);
+  }
+  36%{
+  	transform: translate(-623px, -217px);
+  }
+  39%{
+  	transform: translate(-573px, -274px);
+  }
+  42%{
+  	transform: translate(-635px, -204px);
+  }
+  45%{
+  	transform: translate(-608px, -147px);
+  }
+  48%{
+  	transform: translate(-598px, -147px);
+  }
+  51%{
+  	transform: translate(-608px, -147px);
+  }
+  60%{
+  	transform: translate(-565px, -74px);
+  }
+  65%{
+  	transform: translate(-536px, 19px);
+  }
+  70%{
+  	transform: translate(-562px, 84px);
   }
   100%{
-  	transform: translate(-500px, 0);
+  	transform: translate(-562px, 84px);
   }
-
 }
 
 $blue: #2E94B9;
@@ -138,8 +174,7 @@ html{
 					}
 				}//ball
 				.animation{
-					right: 209px;
-				    bottom: 274px;
+					transform: translate(-450px, 87px);
 				    animation-name: play;
 				    animation-duration: 5s;
 				    animation-iteration-count: 1;
