@@ -1,13 +1,13 @@
 $(document).ready(function () {
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 	$(document).animateScroll();
 	var doc = document.documentElement;
 	doc.setAttribute('data-useragent', navigator.userAgent);
->>>>>>> ad6f72f8cc6faac665ffa0d4bbf2b48b57cb3082
+// >>>>>>> ad6f72f8cc6faac665ffa0d4bbf2b48b57cb3082
 	// var controller = new ScrollMagic.Controller();
 	$('.menu-item').click(function () {
-	$('.menu a').removeClass('active');
+		$('.menu a').removeClass('active');
 		$(this).addClass('active');
 	});
 
@@ -37,7 +37,7 @@ $(document).ready(function () {
 		$('.track').height(h + nh + bh);
 		// $('.content .left').hide();
 		// $('.content .right').hide();
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		//$('video').addClass('animated');
 
 	});
@@ -46,9 +46,9 @@ $(document).ready(function () {
 	// 	.setClassToggle("#trigger1", "zoomIn")
 	// 	.addIndicators()
 	// 	.addTo(controller);
-=======
+//=======
 
->>>>>>> ad6f72f8cc6faac665ffa0d4bbf2b48b57cb3082
+//>>>>>>> ad6f72f8cc6faac665ffa0d4bbf2b48b57cb3082
 
 	});
 	// var scene1 = new ScrollMagic.Scene({ triggerElement: "#trigger1", duration: 450 })
@@ -56,4 +56,3 @@ $(document).ready(function () {
 	// 	.setClassToggle("#trigger1", "fadeIn")
 	// 	.addTo(controller);
 
-});

@@ -171,18 +171,67 @@ html{
 	color: black;
 	body{
 		background:transparent url('../img/bg.png') left top repeat;
+		// .mobile-nav{
+		// 	display: none;
+		// }
+		.track{
+			display: none;
+		}
 		header{
 			width: 100%;
 			height: 655px;
 			background-color: $blue;
-			.int-nav{
-				width: 1024px;
-				margin: auto;
-			}
 			.banner{
-
-			}
-		}
+				position: relative;
+				width: 1080px;
+				margin: auto;
+				height: 100%;
+				background-image: url(../img/marble_table.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: 10px;
+				.int-nav{
+					width: 100%;
+					height: 115px;
+					img{
+						float: left;
+						width: 409px;
+					}
+					.menu{
+						float: right;
+						display: flex;
+						margin-top: 20px;
+						.menu-item{
+							display: inline-block;
+							padding: 13px;
+							font-size: 16px;
+							flex: 1;
+							text-align: center;
+							color: white;
+							float: right;
+							// &:visited{
+							// 	color: black;
+							// }
+							&:hover{
+								border-bottom: 3px solid white;
+							}
+						}//menu-item
+					}
+					.active{
+						color: white;
+						border-bottom: 3px solid white;
+					}//active
+				}//int-nav
+				.ball{
+					position: absolute;
+					right: 95px;
+					bottom: 100px;
+					img{
+						width: 60px;
+					}
+				}
+			}//banner
+		}//header
 	}
 }
 
