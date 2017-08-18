@@ -6,7 +6,10 @@ $(document).ready(function () {
 	// on init
 
 	$('html,body').scrollTop(0);
-
+	$('.scroll-btn').hide();
+	// $('.scroll-btn').click(function(){
+	// 	$(window).scrollTop(60)
+	// });
 	if ($(window).scrollTop() > 0) {
 		body.style.overflow = 'scroll'
 		$('html,body').scrollTop(0);
@@ -19,22 +22,14 @@ $(document).ready(function () {
 
 	// on scroll
 
-	// $(window).scroll(function () {
-	// 	if ($(window).scrollTop() < 10) {
-	// 		$('.scroll-nav').hide()
-	// 		$('.int-nav').show();
-
-	// 	} else {
-	// 		$('.scroll-nav').show()
-	// 		$('.int-nav').hide();
-	// 	}
-	// })
-	$(window).scroll(function (){
+	$(window).scroll(function () {
 		if ($(window).scrollTop() > 10) {
 			$('.int-nav').addClass('scroll-nav');
-	 	} else{
-	 		$('.int-nav').removeClass('scroll-nav');
-	 	}
+			$('.scroll-btn').hide();
+		} else {
+			$('.int-nav').removeClass('scroll-nav');
+			$('.scroll-btn').show();
+		}
 	})
 
 	// 
@@ -62,7 +57,7 @@ $(document).ready(function () {
 		$('.track').height(h);
 		mysvg1.style.display = 'block';
 		mysvg2.style.display = 'none';
-	});	
+	});
 
 	$('a[href*="#process"]').click(function () {
 		$('#history').hide();
@@ -71,12 +66,10 @@ $(document).ready(function () {
 		$('.track').height(h);
 		mysvg1.style.display = 'none';
 		mysvg2.style.display = 'block';
-		$('#mysvg2').height($('.track').height()- 300) 
-		$('#mysvg2 > g').height($('.track').height()-500)
-		// var x = 
-		// $('#dot2').attr('transform',)
 
-		
+
+		$('#mysvg2').height($('.track').height() - 100)
+
 	});
 
 	//Svg 1
@@ -120,8 +113,8 @@ $(document).ready(function () {
 
 
 	// Update dot position when we get a scroll event.
-	window.addEventListener("scroll", positionTheDot1);
 	window.addEventListener("scroll", positionTheDot2);
+	window.addEventListener("scroll", positionTheDot1);
 
 	// Set the initial position of the dot.
 	positionTheDot1();
@@ -232,12 +225,14 @@ $(document).ready(function () {
 	});
 
 	function hideBall() {
-		console.log('hideball')
+		$('.scroll-btn').show();
+		//console.log('hideball')
 		$('#dropzone').removeClass('dropzone')
 		var ball = document.querySelector('.banner .ball')
 		body.style.overflow = 'scroll'
 		ball.style.display = 'none';
 		mysvg1.style.display = 'block';
+		mysvg2.style.display = 'none';
 
 	}
 });
