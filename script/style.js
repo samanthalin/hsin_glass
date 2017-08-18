@@ -1,4 +1,13 @@
 $(document).ready(function () {
+	// on scroll
+	$('.scroll-nav').hide()
+	$(window).scroll(function(){
+		$('.scroll-nav').show()
+		$('.int-nav').hide();
+		
+	})
+
+	// 
 	var a = $('.track').height();
 	$('#mysvg').height(a-20);
 	$(document).animateScroll();
