@@ -1,8 +1,11 @@
 $(document).ready(function () {
-	// on scroll
+	// on init
 	$('.scroll-nav').hide()
+	var body = document.querySelector('body');
+	body.style.overflow = 'hidden'
+	// on scroll
+	var mysvg = document.querySelector('#mysvg')
 	$(window).scroll(function(){
-		
 		var windowTop = $(window).scrollTop();
 		if(windowTop == 0){
 			console.log(windowTop)
@@ -14,7 +17,6 @@ $(document).ready(function () {
 		}
 	})
 	
-
 	// 
 	var a = $('.track').height();
 	$('#mysvg').height(a-20);
@@ -158,12 +160,21 @@ interact('.dropzone').dropzone({
 	 // event.relatedTarget.textContent = 'Dropped';
 	  event.relatedTarget.classList.add('animation')
 	  console.log('droped in')
+	  setTimeout(hideBall, 4500)
 	},
 	ondropdeactivate: function (event) {
 	  // remove active dropzone feedback
 	  event.target.classList.remove('drop-active');
 	  event.target.classList.remove('drop-target');
 	}
+	
   });
+  function hideBall(){
+	console.log('hideball')
+	var ball = document.querySelector('.banner .ball')
+	body.style.overflow = 'scroll'
+	ball.style.display = 'none';
+	mysvg.style.display= 'block';
+	}
 });
 
