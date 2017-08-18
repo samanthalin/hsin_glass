@@ -1,9 +1,8 @@
 @import url(reset.css);
-
+@import url(animate.min.css);
 @keyframes play {
   0% {
     transform: translate(-113px, -174px);
-    // transform: rotate(0);
   }
   5% {
     transform: translate(-113px, -555px);
@@ -161,12 +160,29 @@ html{
 								border-bottom: 3px solid white;
 							}
 						}//menu-item
-					}
+					}//menu
 					.active{
 						color: white;
 						border-bottom: 3px solid white;
 					}//active
 				}//int-nav
+				.drag{
+					position: absolute;
+					width: 75px;
+					right: 20px;
+					bottom: 150px;
+				}
+				.drop{
+					position: absolute;
+					width: 133px;
+					right: 40px;
+					bottom: 300px;
+				}
+				.warning {
+					animation-name: pulse;
+					animation-duration: 1s;
+					animation-iteration-count: infinite;
+				}
 				.ball{
 					position: absolute;
 					right: 95px;

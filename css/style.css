@@ -1,4 +1,5 @@
 @import url(reset.css);
+@import url(animate.min.css);
 @keyframes play {
   0% {
     transform: translate(-113px, -174px); }
@@ -122,6 +123,20 @@ html {
           html body header .banner .int-nav .active {
             color: white;
             border-bottom: 3px solid white; }
+        html body header .banner .drag {
+          position: absolute;
+          width: 75px;
+          right: 20px;
+          bottom: 150px; }
+        html body header .banner .drop {
+          position: absolute;
+          width: 133px;
+          right: 40px;
+          bottom: 300px; }
+        html body header .banner .warning {
+          animation-name: pulse;
+          animation-duration: 1s;
+          animation-iteration-count: infinite; }
         html body header .banner .ball {
           position: absolute;
           right: 95px;
