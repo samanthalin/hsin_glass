@@ -2,10 +2,18 @@ $(document).ready(function () {
 	// on scroll
 	$('.scroll-nav').hide()
 	$(window).scroll(function(){
-		$('.scroll-nav').show()
-		$('.int-nav').hide();
 		
+		var windowTop = $(window).scrollTop();
+		if(windowTop == 0){
+			console.log(windowTop)
+			$('.scroll-nav').hide()
+			$('.int-nav').show();
+		}else {
+			$('.scroll-nav').show()
+			$('.int-nav').hide();
+		}
 	})
+	
 
 	// 
 	var a = $('.track').height();
