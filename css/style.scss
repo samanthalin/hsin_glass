@@ -1,167 +1,29 @@
 @import url(reset.css);
 
-// html{
-// 	box-sizing: border-box;
-// 	background-color: white;
-// 	font-size: 14px;
-// 	font-family: 'Helvetica';
-// 	color: black;
-// 	body{
-// 		.mobile-nav{
-// 			width: 100%;
-// 			min-height: 50px;
-// 			// border-bottom: 1px solid #d6d6d6;
-// 			position: fixed;
-// 			top: 0;
-// 			background-color: white;
-// 			z-index: 9999;
-// 			display: none;
-// 			.logo{
-// 				width: 195px;
-// 			    height: 50px;
-// 			    background-image: url(../img/logo.png);
-// 			    background-size: contain;
-// 			    margin: auto;
-// 			    background-repeat: no-repeat;
-// 			    @media screen and (min-width: 768px){
-// 			    	float: left;
-// 			    }
-// 			}
-// 			.menu{
-// 				display: flex;
-// 				.menu-item{
-// 					display: inline-block;
-// 					padding: 13px;
-// 					font-size: 16px;
-// 					flex: 1;
-// 					text-align: center;
-// 					color: black;
-// 					// &:visited{
-// 					// 	color: black;
-// 					// }
-// 					&:hover{
-// 						color: orange;
-// 					}
-// 				}
-// 				.active{
-// 					color: orange;
-// 					border-bottom: 3px solid orange;
-// 				}
-// 				@media screen and (min-width: 768px){
-// 			    	float: right;	
-// 			    	width: 300px;
-// 			    }
-// 			}
-// 		}//nav
-// 		.track{
-// 			position: absolute;
-// 			width: 80px;
-// 			height: 1471px;
-// 			left: 50%;
-// 			margin-left: -40px;
-// 			background-image: url(../img/dash.png);
-// 			background-size: contain;
-// 			background-repeat-y: repeat;
-// 			.ball{
-// 				position: fixed;
-// 				top: 350px;
-// 				left: 50%;
-// 				width: 60px;
-// 				height: 60px;
-// 				margin-left: -30px;
-// 				img{
-// 					width: 100%;
-// 				}
-// 			}//ball
-// 		}//track
-// 		.banner{
-// 			position: relative;
-// 			height: 450px;
-// 			width: 100%;
-// 			background-color: gray;
-// 			z-index: 100;
-// 		}//banner
-// 		.container{
-// 			background-color: #ffe5d2;
-// 			width: 100%;
-// 			padding: 20px 0px;
-// 			&:after{
-// 				content: '';
-// 				width: 100%;
-// 				display: block;
-// 				clear: both;
-// 			}
-// 			.content{
-// 				width: 90%;
-// 				margin: auto;
-// 				max-width: 705px;
-// 				.box{
-// 					width: 90%;
-// 					margin: auto;
-// 					max-width: 350px;
-// 					border: 1px solid black;
-// 					border-radius: 10px;
-// 					min-height: 150px;
-// 					margin-bottom: 20px;
-// 					background-color: white;
-// 					@media screen and (min-width: 768px){
-// 						margin:0;
-// 						max-width: 265px;
-// 						@media screen and (min-width: 992px){
+@keyframes play {
+  0% {
+    transform: translate(0);
+  }
+  5% {
+    transform: translate(0, -500px);
+  }
+  10% {
+  	transform: translate(-550px, -500px);
+  }
+  20%{
+  	transform: translate(-550px, -300px);
+  }
+  40%{
+  	transform: translate(-440px, -40px);
+  }
+  100%{
+  	transform: translate(-500px, 0);
+  }
 
-// 						}
-// 					}
-// 				}//box
-// 				.left{
-// 					@media screen and (min-width: 768px){
-// 						// margin-left: -420px;
-// 						// margin-right: 200px;
-// 						float: left;
-// 						margin-bottom: 175px;
-// 						clear: both;
-// 					}
-// 				}
-// 				.right{
-// 					@media screen and (min-width: 768px){
-// 						float: right;
-// 						margin-top: 145px;
-// 					}
-// 				}
-// 			}//content
-// 			@media screen and (min-width: 768px){
-				
-// 			}
-// 		}//container
-// 		#process{
-// 			display: none;
-// 			video{
-// 				display: block;
-// 				border: 1px solid black;
-// 				margin: auto;
-// 				margin-bottom: 20px;
-// 			}
-// 			.left{
-// 				@media screen and (min-width: 768px){
-// 					margin-bottom: 175px;
-// 					clear: both;
-// 				}
-// 			}
-// 			.right{
-// 				@media screen and (min-width: 768px){
-// 					float: right;
-// 					margin-top: 145px;
-// 				}
-// 			}
-// 		}
-// 		footer{
-// 			width: 100%;
-// 			height: 200px;
-// 			background-color: gray;
-// 		}
-// 	}
-// }
+}
 
 $blue: #2E94B9;
+$red: #FD5959;
 
 html{
 	box-sizing: border-box;
@@ -171,9 +33,37 @@ html{
 	color: black;
 	body{
 		background:transparent url('../img/bg.png') left top repeat;
-		// .mobile-nav{
-		// 	display: none;
-		// }
+		.scroll-nav{
+			// display: none;
+			width: 100%;
+			height: 65px;
+			background-color: white;
+			position: fixed;
+			z-index: 9999;
+			.nav-frame{
+				width: 1080px;
+				margin: auto;
+				.logo{
+					width: 254px;
+					float: left;
+					margin-top: 5px;
+				}
+				.menu{
+					float: right;
+					display: flex;
+					.menu-item{
+						flex: 1;
+						font-size: 17px;
+						color: $blue;
+						padding: 19px;
+					}
+					.active{
+						border-bottom: 5px solid $blue;
+					}//active
+				}
+			}
+		}
+
 		.track{
 			width: 100px;
 			position: absolute;
@@ -246,6 +136,26 @@ html{
 					img{
 						width: 60px;
 					}
+				}//ball
+				.animation{
+					right: 209px;
+				    bottom: 274px;
+				    animation-name: play;
+				    animation-duration: 5s;
+				    animation-iteration-count: 1;
+				    transition-timing-function: linear;
+				}
+				.drop-place{
+					position: absolute;
+				    right: 202px;
+				    bottom: 268px;
+				    width: 74px;
+				    height: 74px;
+				    border-radius: 37px;
+				}
+				.drop-place-hint{
+					background-color: white;
+					opacity: 0.1;
 				}
 			}//banner
 		}//header
