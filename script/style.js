@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	
+
 	var body = document.querySelector('body')
 	var mysvg1 = document.querySelector('#mysvg1')
 	var mysvg2 = document.querySelector('#mysvg2')
@@ -7,18 +7,17 @@ $(document).ready(function () {
 
 	$('html,body').scrollTop(0);
 
-	if($(window).scrollTop() > 0) {
+	if ($(window).scrollTop() > 0) {
 		body.style.overflow = 'scroll'
 		$('html,body').scrollTop(0);
 	} else {
 		body.style.overflow = 'hidden'
 		$('.scroll-nav').hide();
 	}
-	
-
-
-	mysvg2.style.display = 'none';
 	$('.drop').hide();
+	mysvg1.style.display = 'none';
+	mysvg2.style.display = 'none';
+
 	// on scroll
 
 	$(window).scroll(function () {
@@ -66,34 +65,61 @@ $(document).ready(function () {
 		$('.track').height(h);
 		mysvg1.style.display = 'none';
 		mysvg2.style.display = 'block';
+		$('#mysvg2').height($('.track').height()- 300) 
+		$('#mysvg2 > g').height($('.track').height()-500)
+		// var x = 
+		// $('#dot2').attr('transform',)
 
-		return h;
+		
 	});
 
-
-	function positionTheDot(h) {
+	//Svg 1
+	function positionTheDot1() {
 
 		// What percentage down the page are we document.body.scrollTop ? 
 		var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
 		// Get path length
-		var path = document.getElementById("theMotionPath");
+		var path = document.getElementById("theMotionPath1");
 		var pathLen = path.getTotalLength();
 
 		// Get the position of a point at <scrollPercentage> along the path.
 		var pt = path.getPointAtLength(scrollPercentage * pathLen);
 		//console.log(pt)
 		// Position the red dot at this point
-		var dot = document.getElementById("dot");
+		var dot = document.getElementById("dot1");
 		dot.setAttribute("transform", "translate(" + pt.x + "," + pt.y + ")");
 
 	};
 
+
+	//Svg 2
+	function positionTheDot2() {
+
+		// What percentage down the page are we document.body.scrollTop ? 
+		var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+		// Get path length
+		var path = document.getElementById("theMotionPath2");
+		var pathLen = path.getTotalLength();
+
+		// Get the position of a point at <scrollPercentage> along the path.
+		var pt = path.getPointAtLength(scrollPercentage * pathLen);
+		//console.log(pt)
+		// Position the red dot at this point
+		var dot = document.getElementById("dot2");
+		dot.setAttribute("transform", "translate(" + pt.x + "," + pt.y + ")");
+
+	};
+
+
 	// Update dot position when we get a scroll event.
-	window.addEventListener("scroll", positionTheDot);
+	window.addEventListener("scroll", positionTheDot1);
+	window.addEventListener("scroll", positionTheDot2);
 
 	// Set the initial position of the dot.
-	positionTheDot();
+	positionTheDot1();
+	positionTheDot2();
 
 	// target elements with the "draggable" class
 	interact('.draggable')
