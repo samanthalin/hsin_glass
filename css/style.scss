@@ -355,6 +355,23 @@ html{
 		}
 		#process{
 			display: none;
+			.content{
+				width: 920px;
+				margin: auto;
+				padding: 50px 0;
+				height: 2200px;
+				.left{
+					float: left;
+					margin-bottom: 175px;
+					clear: both;
+					box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
+				}
+				.right{
+					float: right;
+					margin-top: 145px;
+					box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
+				}
+			}
 		}
 	}
 }
