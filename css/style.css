@@ -27,7 +27,8 @@ html {
           height: 115px; }
           html body header .banner .int-nav img {
             float: left;
-            width: 409px; }
+            width: 409px;
+            margin-top: 20px; }
           html body header .banner .int-nav .menu {
             float: right;
             display: flex;
