@@ -233,6 +233,90 @@ html{
 				}
 			}//banner
 		}//header
+		#history{
+			.content{
+				width: 1080px;
+				margin: auto;
+				padding: 150px 33px;
+				height: 3200px;
+				.box{
+					width: 373px;
+					background-color: white;
+					border-radius: 22px;
+					padding: 2%;
+					box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3); 
+				}
+				.left{
+					float: left;
+					clear: both;
+				}
+				.right{
+					float: right;
+					//clear: both;
+				}
+				.p1{
+					width: 83px;
+					margin-left: 364px;
+    				margin-top: -78px;
+					img{
+						width: 100%;
+					}
+				}
+				.p2{
+					width: 287px;
+					margin-left: 115px;
+					img{
+						width: 100%;
+					}
+				}
+				.p3{
+					width: 374px;
+					img{
+						width: 100%;
+					}
+				}
+				.p4{
+					width: 432px;
+					img{
+						width: 100%;
+					}
+				}
+				.p5{
+					width: 373px;
+					img{
+						width: 100%;
+					}
+				}
+				.p6{
+					width: 369px;
+					img{
+						width: 100%;
+					}
+				}
+				.p7{
+					width: 499px;
+					img{
+						width: 100%;
+					}
+				}
+				.h3{
+					margin-top: 127px;
+				}
+				.h12{
+					position: relative;
+					&:after{
+						content: ' ';
+						position: absolute;
+						width: 100%;
+						clear: both;
+						top: 20px;
+					}
+				}
+			}
+		}
+		#process{
+			display: none;
+		}
 	}
 }
 

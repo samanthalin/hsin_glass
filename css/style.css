@@ -52,5 +52,64 @@ html {
           bottom: 100px; }
           html body header .banner .ball img {
             width: 60px; }
+    html body #history .content {
+      width: 1080px;
+      margin: auto;
+      padding: 150px 33px;
+      height: 3200px; }
+      html body #history .content .box {
+        width: 373px;
+        background-color: white;
+        border-radius: 22px;
+        padding: 2%;
+        box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3); }
+      html body #history .content .left {
+        float: left;
+        clear: both; }
+      html body #history .content .right {
+        float: right; }
+      html body #history .content .p1 {
+        width: 83px;
+        margin-left: 364px;
+        margin-top: -78px; }
+        html body #history .content .p1 img {
+          width: 100%; }
+      html body #history .content .p2 {
+        width: 287px;
+        margin-left: 115px; }
+        html body #history .content .p2 img {
+          width: 100%; }
+      html body #history .content .p3 {
+        width: 374px; }
+        html body #history .content .p3 img {
+          width: 100%; }
+      html body #history .content .p4 {
+        width: 432px; }
+        html body #history .content .p4 img {
+          width: 100%; }
+      html body #history .content .p5 {
+        width: 373px; }
+        html body #history .content .p5 img {
+          width: 100%; }
+      html body #history .content .p6 {
+        width: 369px; }
+        html body #history .content .p6 img {
+          width: 100%; }
+      html body #history .content .p7 {
+        width: 499px; }
+        html body #history .content .p7 img {
+          width: 100%; }
+      html body #history .content .h3 {
+        margin-top: 127px; }
+      html body #history .content .h12 {
+        position: relative; }
+        html body #history .content .h12:after {
+          content: ' ';
+          position: absolute;
+          width: 100%;
+          clear: both;
+          top: 20px; }
+    html body #process {
+      display: none; }
 
 /*# sourceMappingURL=style.css.map */
