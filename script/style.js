@@ -147,6 +147,5 @@ interact('.dropzone').dropzone({
 	  event.target.classList.remove('drop-target');
 	}
   });
-
 });
 
