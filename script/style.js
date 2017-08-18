@@ -12,7 +12,6 @@ $(document).ready(function () {
 		$('html,body').scrollTop(0);
 	} else {
 		body.style.overflow = 'hidden'
-		$('.scroll-nav').hide();
 	}
 	$('.drop').hide();
 	mysvg1.style.display = 'none';
@@ -20,15 +19,22 @@ $(document).ready(function () {
 
 	// on scroll
 
-	$(window).scroll(function () {
-		if ($(window).scrollTop() < 10) {
-			$('.scroll-nav').hide()
-			$('.int-nav').show();
+	// $(window).scroll(function () {
+	// 	if ($(window).scrollTop() < 10) {
+	// 		$('.scroll-nav').hide()
+	// 		$('.int-nav').show();
 
-		} else {
-			$('.scroll-nav').show()
-			$('.int-nav').hide();
-		}
+	// 	} else {
+	// 		$('.scroll-nav').show()
+	// 		$('.int-nav').hide();
+	// 	}
+	// })
+	$(window).scroll(function (){
+		if ($(window).scrollTop() > 10) {
+			$('.int-nav').addClass('scroll-nav');
+	 	} else{
+	 		$('.int-nav').removeClass('scroll-nav');
+	 	}
 	})
 
 	// 
@@ -56,7 +62,7 @@ $(document).ready(function () {
 		$('.track').height(h);
 		mysvg1.style.display = 'block';
 		mysvg2.style.display = 'none';
-	});
+	});	
 
 	$('a[href*="#process"]').click(function () {
 		$('#history').hide();
