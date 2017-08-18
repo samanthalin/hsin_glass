@@ -129,16 +129,17 @@ interact('.dropzone').dropzone({
 	  // feedback the possibility of a drop
 	  dropzoneElement.classList.add('drop-target');
 	  draggableElement.classList.add('can-drop');
-	  draggableElement.textContent = 'Dragged in';
+	  //draggableElement.textContent = 'Dragged in';
 	},
 	ondragleave: function (event) {
 	  // remove the drop feedback style
 	  event.target.classList.remove('drop-target');
 	  event.relatedTarget.classList.remove('can-drop');
-	  event.relatedTarget.textContent = 'Dragged out';
+	  //event.relatedTarget.textContent = 'Dragged out';
 	},
 	ondrop: function (event) {
-	  event.relatedTarget.textContent = 'Dropped';
+	 // event.relatedTarget.textContent = 'Dropped';
+	  event.relatedTarget.classList.add('animation')
 	  console.log('droped in')
 	},
 	ondropdeactivate: function (event) {
