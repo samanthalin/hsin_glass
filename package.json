@@ -1,0 +1,20 @@
+{
+  "name": "hsin_glass",
+  "version": "1.0.0",
+  "description": "HsinChu glass intro",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samanthalin/hsin_glass.git"
+  },
+  "author": "Edward Oo, Samantha Lin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samanthalin/hsin_glass/issues"
+  },
+  "homepage": "https://github.com/samanthalin/hsin_glass#readme",
+  "devDependencies": {}
+}

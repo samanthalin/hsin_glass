@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+	//typical import 
 	var body = document.querySelector('body')
 	var mysvg1 = document.querySelector('#mysvg1')
 	var mysvg2 = document.querySelector('#mysvg2')
@@ -67,8 +67,8 @@ $(document).ready(function () {
 		mysvg1.style.display = 'none';
 		mysvg2.style.display = 'block';
 
-
-		$('#mysvg2').height($('.track').height() - 100)
+		addSlideInDownAnimatation(mysvg2)
+		$('#mysvg2').height($('.track').height())
 
 	});
 
@@ -232,8 +232,11 @@ $(document).ready(function () {
 		body.style.overflowY = 'scroll'
 		ball.style.display = 'none';
 		mysvg1.style.display = 'block';
-		setTimeout(mysvg1.classList.add('animated', 'slideInDown'),2000);
 		mysvg2.style.display = 'none';
+		addSlideInDownAnimatation(mysvg1)
 
+	}
+	function addSlideInDownAnimatation(selected) {
+		setTimeout(selected.classList.add('animated', 'slideInDown'),2000);
 	}
 });
