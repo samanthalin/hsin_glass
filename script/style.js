@@ -229,7 +229,7 @@ $(document).ready(function () {
 		console.log('hideball')
 		$('#dropzone').removeClass('dropzone')
 		var ball = document.querySelector('.banner .ball')
-		body.style.overflow = 'scroll'
+		body.style.overflowY = 'scroll'
 		ball.style.display = 'none';
 		mysvg1.style.display = 'block';
 		setTimeout(mysvg1.classList.add('animated', 'slideInDown'),2000);
