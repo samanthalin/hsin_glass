@@ -8,7 +8,7 @@ $(document).ready(function () {
 	$('html,body').scrollTop(0);
 	$('.scroll-btn').hide();
 	// $('.scroll-btn').click(function(){
-	// 	$(window).scrollTop(60)
+	// 	$(window).scrollTop(100)
 	// });
 	if ($(window).scrollTop() > 0) {
 		body.style.overflow = 'scroll'
@@ -214,7 +214,7 @@ $(document).ready(function () {
 			console.log('droped in')
 			$('.drop').hide();
 			$('.drop-place').removeClass('shining');
-			// setTimeout(hideBall, 4500)
+			setTimeout(hideBall, 5000)
 		},
 		ondropdeactivate: function (event) {
 			// remove active dropzone feedback
@@ -226,12 +226,13 @@ $(document).ready(function () {
 
 	function hideBall() {
 		$('.scroll-btn').show();
-		//console.log('hideball')
+		console.log('hideball')
 		$('#dropzone').removeClass('dropzone')
 		var ball = document.querySelector('.banner .ball')
 		body.style.overflow = 'scroll'
 		ball.style.display = 'none';
 		mysvg1.style.display = 'block';
+		setTimeout(mysvg1.classList.add('animated', 'slideInDown'),2000);
 		mysvg2.style.display = 'none';
 
 	}

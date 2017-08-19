@@ -3,73 +3,65 @@
 @keyframes play {
   0% {
     transform: translate(-113px, -174px);
+    animation-timing-function: linear;
   }
   5% {
     transform: translate(-113px, -555px);
+    animation-timing-function: linear;
   }
   15% {
   	transform: translate(-638px, -555px);
-  	border: 1px solid red;
+  	animation-timing-function: linear;
   }
   20%{
   	transform: translate(-638px, -437px) rotate(0);
-  	border: 1px solid orange;
+  	animation-timing-function: linear;
   }
   25%{
   	transform: translate(-484px, -355px) rotate(120deg);
-  	border: 1px solid yellow;
+  	animation-timing-function: linear;
   }
   30%{
   	transform: translate(-481px, -288px) rotate(80deg);
-  	border: 1px solid green;
+  	animation-timing-function: linear;
   }
   32%{
   	transform: translate(-508px, -283px) rotate(20deg);
-  	border: 1px solid blue;
+  	animation-timing-function: linear;
   }
-  // 35%{
-  // 	transform: translate(-502px, -271px) rotate(-10deg);
-  // 	border: 1px solid purple;
-  // }
   36%{
   	transform: translate(-495px, -231px) rotate(70deg);
-  	border: 1px solid red;
+  	animation-timing-function: linear;
   }
   39%{
   	transform: translate(-541px, -184px) rotate(-170deg);
-  	border: 1px solid orange;
+  	animation-timing-function: linear;
   }
   42%{
   	transform: translate(-527px, -146px) rotate(-130deg);
-  	border: 1px solid yellow;
+  	animation-timing-function: linear;
   }
   45%{
   	transform: translate(-484px, -76px) rotate(-70deg);
-  	border: 1px solid green;
+  	animation-timing-function: linear;
   }
   48%{
   	transform: translate(-452px, -49px) rotate(-10deg);
-  	border: 1px solid blue;
+  	animation-timing-function: linear;
   }
   51%{
   	transform: translate(-451px, 85px) rotate(50deg);
-  	border: 1px solid purple;
+  	animation-timing-function: linear;
+  	opacity: 1;
   }
-  // 60%{
-  // 	transform: translate(-565px, -74px);
-  // 	border: 1px solid red;
-  // }
-  // 65%{
-  // 	transform: translate(-536px, 19px);
-  // 	border: 1px solid orange;
-  // }
-  // 70%{
-  // 	transform: translate(-562px, 84px);
-  // 	opacity: 1;
-  // 	border: 1px solid yellow;
-  // }
+  60%{
+  	transform: translate(-451px, 85px) rotate(50deg);
+  	animation-timing-function: linear;
+	opacity: 0;
+  }
   100%{
   	transform: translate(-451px, 85px) rotate(50deg);
+  	animation-timing-function: linear;
   	opacity: 0;
   }
 }
@@ -119,6 +111,11 @@ html{
 			// 	}
 			// }
 		}
+		// #dot1{
+		// 	animation-name: slideInDown;
+		// 	animation-duration: 1s;
+		// 	animation-iteration-count: 1;
+		// }
 		header{
 			width: 100%;
 			height: 655px;
@@ -235,7 +232,7 @@ html{
 				.animation{
 					transform: translate(-450px, 87px);
 				    animation-name: play;
-				    animation-duration: 50s;
+				    animation-duration: 8s;
 				    animation-iteration-count: 1;
 				    transition-timing-function: linear;
 				}
