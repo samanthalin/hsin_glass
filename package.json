@@ -4,7 +4,8 @@
   "description": "HsinChu glass intro",
   "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,7 @@
     "url": "https://github.com/samanthalin/hsin_glass/issues"
   },
   "homepage": "https://github.com/samanthalin/hsin_glass#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
 }
