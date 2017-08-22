@@ -2,10 +2,10 @@
   "name": "hsin_glass",
   "version": "1.0.0",
   "description": "HsinChu glass intro",
-  "main": "bundle.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
