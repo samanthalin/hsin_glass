@@ -8,7 +8,7 @@
     ```
 3. Dev server will start on port 8080
 
-網站: https://hsinglass-tbxrsttaju.now.sh/
+網站: https://okz.io/project/hsinchu-glass-2017/
 
 參考資料: 玻璃工藝博物館
 
