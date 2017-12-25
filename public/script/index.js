@@ -1,4 +1,3 @@
-import '../css/style.scss'
 import '../script/animate-scroll.js'
 import '../script/TweenMax.js'
 

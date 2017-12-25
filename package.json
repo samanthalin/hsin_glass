@@ -3,8 +3,8 @@
   "version": "1.0.1",
   "description": "HsinChu glass intro",
   "scripts": {
-    "start": "cross-env NODE_ENV=production parcel ./public/index.html",
-    "build": "cross-env NODE_ENV=production parcel build ./public/index.html --no-minify --public-url / -d build/output"
+    "start": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html -d build --public-url ./ --no-minify --no-cache"
   },
   "repository": {
     "type": "git",
