@@ -1,108 +1,200 @@
-@import url(reset.css);
-@import url(animate.min.css);
-@keyframes play {
-  0% {
-    transform: translate(-113px, -174px);
-    animation-timing-function: linear;
-  }
-  5% {
-    transform: translate(-113px, -555px);
-    animation-timing-function: linear;
-  }
-  15% {
-  	transform: translate(-638px, -555px);
-  	animation-timing-function: linear;
-  }
-  20%{
-  	transform: translate(-638px, -437px) rotate(0);
-  	animation-timing-function: linear;
-  }
-  25%{
-  	transform: translate(-484px, -355px) rotate(120deg);
-  	animation-timing-function: linear;
-  }
-  30%{
-  	transform: translate(-481px, -288px) rotate(80deg);
-  	animation-timing-function: linear;
-  }
-  32%{
-  	transform: translate(-508px, -283px) rotate(20deg);
-  	animation-timing-function: linear;
-  }
-  36%{
-  	transform: translate(-495px, -231px) rotate(70deg);
-  	animation-timing-function: linear;
-  }
-  39%{
-  	transform: translate(-541px, -184px) rotate(-170deg);
-  	animation-timing-function: linear;
-  }
-  42%{
-  	transform: translate(-527px, -146px) rotate(-130deg);
-  	animation-timing-function: linear;
-  }
-  45%{
-  	transform: translate(-484px, -76px) rotate(-70deg);
-  	animation-timing-function: linear;
-  }
-  48%{
-  	transform: translate(-452px, -49px) rotate(-10deg);
-  	animation-timing-function: linear;
-  }
-  51%{
-  	transform: translate(-451px, 85px) rotate(50deg);
-  	animation-timing-function: linear;
-  	opacity: 1;
-  }
-  60%{
-  	transform: translate(-451px, 85px) rotate(50deg);
-  	animation-timing-function: linear;
-	opacity: 0;
-  }
-  100%{
-  	transform: translate(-451px, 85px) rotate(50deg);
-  	animation-timing-function: linear;
-  	opacity: 0;
-  }
-}
-
-@keyframes shining {
-  0% {  opacity: 0.7; box-shadow: 0 0 30px white;; }
-  50% {   opacity: 1; box-shadow: 0 0 30px white; }
-  100% {  opacity: 0.7; box-shadow: 0 0 30px white;; }   
-}
-
-@keyframes roll {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
+@import 'reset.scss';
+@import 'animate.scss';
 $blue: #2E94B9;
 $red: #FD5959;
-
-html{
+html {
 	box-sizing: border-box;
 	background-color: white;
 	font-size: 14px;
 	font-family: 'Helvetica';
 	color: black;
-	body{
-		background:transparent url('../img/bg.png') left top repeat;
-		.track{
+	body {
+		background: transparent url('../img/bg.png') left top repeat;
+		#mysvg1 {
+			margin-top: 5%;
+			top: 615px;
+			left: calc(50% - 100px);
+			position: absolute;
+			width: 200px;
+		}
+		#mysvg2 {
+			margin-top: 5%;
+			top: 615px;
+			left: calc(50% - 100px);
+			position: absolute;
+			width: 200px;
+		}
+		@keyframes scrollDown {
+			from {
+				top: 4px;
+			}
+			to {
+				top: 10px;
+			}
+		}
+		.scroll-btn.light {
+			height: 40px;
+			position: absolute;
+			z-index: 9;
+			left: 50%;
+			bottom: 16px;
+			transform: translateX(-50%);
+			text-align: center;
+			font-size: 12px;
+			color: #fff;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+		.scroll-btn.light i {
+			width: 24px;
+			height: 40px;
+			display: block;
+			position: relative;
+			margin: 0 auto;
+			border: 2px solid #fff;
+			border-radius: 12px;
+			transition: inherit;
+		}
+		.scroll-btn.light i:before {
+			content: "";
+			width: 6px;
+			height: 6px;
+			position: absolute;
+			border-radius: 100%;
+			top: 4px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #fff;
+			transition: inherit;
+		}
+		.scroll-btn.light p {
+			position: relative;
+			z-index: 2;
+			opacity: 1;
+			margin-top: -20px;
+			letter-spacing: 4px;
+			text-transform: uppercase;
+			transition: inherit;
+		}
+		.scroll-btn.light:hover i {
+			background-color: #fff;
+		}
+		.scroll-btn.light:hover i:before {
+			animation: scrollDown 1s ease infinite;
+			background-color: #bbb;
+		}
+		.scroll-btn.light:hover p {
+			opacity: 0;
+			letter-spacing: 12px;
+			transform: translateY(-32px);
+		}
+		@keyframes scrollDown {
+			from {
+				top: 4px;
+			}
+			to {
+				top: 10px;
+			}
+		}
+		@keyframes play {
+			0% {
+				transform: translate(-113px, -174px);
+				animation-timing-function: linear;
+			}
+			5% {
+				transform: translate(-113px, -555px);
+				animation-timing-function: linear;
+			}
+			15% {
+				transform: translate(-638px, -555px);
+				animation-timing-function: linear;
+			}
+			20% {
+				transform: translate(-638px, -437px) rotate(0);
+				animation-timing-function: linear;
+			}
+			25% {
+				transform: translate(-484px, -355px) rotate(120deg);
+				animation-timing-function: linear;
+			}
+			30% {
+				transform: translate(-481px, -288px) rotate(80deg);
+				animation-timing-function: linear;
+			}
+			32% {
+				transform: translate(-508px, -283px) rotate(20deg);
+				animation-timing-function: linear;
+			}
+			36% {
+				transform: translate(-495px, -231px) rotate(70deg);
+				animation-timing-function: linear;
+			}
+			39% {
+				transform: translate(-541px, -184px) rotate(-170deg);
+				animation-timing-function: linear;
+			}
+			42% {
+				transform: translate(-527px, -146px) rotate(-130deg);
+				animation-timing-function: linear;
+			}
+			45% {
+				transform: translate(-484px, -76px) rotate(-70deg);
+				animation-timing-function: linear;
+			}
+			48% {
+				transform: translate(-452px, -49px) rotate(-10deg);
+				animation-timing-function: linear;
+			}
+			51% {
+				transform: translate(-451px, 85px) rotate(50deg);
+				animation-timing-function: linear;
+				opacity: 1;
+			}
+			60% {
+				transform: translate(-451px, 85px) rotate(50deg);
+				animation-timing-function: linear;
+				opacity: 0;
+			}
+			100% {
+				transform: translate(-451px, 85px) rotate(50deg);
+				animation-timing-function: linear;
+				opacity: 0;
+			}
+		}
+		@keyframes shining {
+			0% {
+				opacity: 0.7;
+				box-shadow: 0 0 30px white;
+				;
+			}
+			50% {
+				opacity: 1;
+				box-shadow: 0 0 30px white;
+			}
+			100% {
+				opacity: 0.7;
+				box-shadow: 0 0 30px white;
+				;
+			}
+		}
+		@keyframes roll {
+			0% {
+				transform: rotate(0);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		.track {
 			width: 100px;
 			position: absolute;
 			left: 50%;
 			top: 655px;
 			height: 3100px;
 			margin-left: -50px;
-			background-image: url(../img/dash.png);
+			background-image: url('../img/dash.png');
 			background-repeat: repeat-y;
-			background-size: contain;
-			// .ball{
+			background-size: contain; // .ball{
 			// 	position: fixed;
 			// 	top: 50%;
 			// 	left: calc(50% - 30px);
@@ -110,59 +202,57 @@ html{
 			// 		width: 60px;
 			// 	}
 			// }
-		}
-		// #dot1{
+		} // #dot1{
 		// 	animation-name: slideInDown;
 		// 	animation-duration: 1s;
 		// 	animation-iteration-count: 1;
 		// }
-		header{
+		header {
 			width: 100%;
 			height: 655px;
 			background-color: $blue;
-			.banner{
+			.banner {
 				position: relative;
 				width: 1080px;
 				margin: auto;
 				height: 100%;
-				background-image: url(../img/marble_table.png);
+				background-image: url('../img/marble_table.png');
 				background-size: contain;
 				background-repeat: no-repeat;
 				background-position: 10px;
-				.int-nav{
+				.int-nav {
 					width: 100%;
 					height: 115px;
-					img{
+					img {
 						float: left;
 						width: 409px;
 						margin-top: 20px;
 					}
-					.menu{
+					.menu {
 						float: right;
 						display: flex;
 						margin-top: 20px;
-						.menu-item{
+						.menu-item {
 							display: inline-block;
 							padding: 13px;
 							font-size: 16px;
 							flex: 1;
 							text-align: center;
 							color: white;
-							float: right;
-							// &:visited{
+							float: right; // &:visited{
 							// 	color: black;
 							// }
-							&:hover{
+							&:hover {
 								border-bottom: 3px solid white;
 							}
-						}//menu-item
-					}//menu
-					.active{
+						} //menu-item
+					} //menu
+					.active {
 						color: white;
 						border-bottom: 3px solid white;
-					}//active
-				}//int-nav
-				.scroll-nav{
+					} //active
+				} //int-nav
+				.scroll-nav {
 					// display: none;
 					width: 100%;
 					height: 65px;
@@ -171,34 +261,34 @@ html{
 					left: 0;
 					z-index: 9999;
 					box-shadow: 0 2px 1px rgba(0, 0, 0, 0.12);
-					.nav-frame{
+					.nav-frame {
 						width: 1080px;
 						margin: auto;
-						.logo{
+						.logo {
 							width: 254px;
 							float: left;
 							margin-top: 5px;
 						}
-						.menu{
+						.menu {
 							float: right;
 							display: flex;
 							margin-top: 0;
-							.menu-item{
+							.menu-item {
 								flex: 1;
 								font-size: 17px;
 								color: $blue;
 								padding: 19px;
-								&:hover{
+								&:hover {
 									border-bottom: 5px solid $blue;
 								}
 							}
-							.active{
+							.active {
 								border-bottom: 5px solid $blue;
-							}//active
+							} //active
 						}
 					}
 				}
-				.drag{
+				.drag {
 					position: absolute;
 					width: 100px;
 					right: 0px;
@@ -207,7 +297,7 @@ html{
 					animation-duration: 1s;
 					animation-iteration-count: infinite;
 				}
-				.drop{
+				.drop {
 					position: absolute;
 					width: 154px;
 					right: 27px;
@@ -216,159 +306,158 @@ html{
 					animation-duration: 1s;
 					animation-iteration-count: infinite;
 				}
-				.ball{
+				.ball {
 					position: absolute;
 					right: 95px;
 					bottom: 100px;
 					cursor: pointer;
-					&:hover{
+					&:hover {
 						transform: scale(1.1);
 						transition: transform 0.1s linear;
 					}
-					img{
+					img {
 						width: 60px;
 					}
-				}//ball
-				.animation{
+				} //ball
+				.animation {
 					transform: translate(-450px, 87px);
-				    animation-name: play;
-				    animation-duration: 8s;
-				    animation-iteration-count: 1;
-				    transition-timing-function: linear;
+					animation-name: play;
+					animation-duration: 8s;
+					animation-iteration-count: 1;
+					transition-timing-function: linear;
 				}
-				.drop-place{
+				.drop-place {
 					position: absolute;
-				    right: 202px;
-				    bottom: 268px;
-				    width: 74px;
-				    height: 74px;
-				    border-radius: 37px;
+					right: 202px;
+					bottom: 268px;
+					width: 74px;
+					height: 74px;
+					border-radius: 37px;
 				}
-				.shining{
+				.shining {
 					animation-name: shining;
 					animation-duration: 1s;
 					animation-iteration-count: infinite;
 				}
-			}//banner
-		}//header
-		#history{
-			.content{
+			} //banner
+		} //header
+		#history {
+			.content {
 				width: 1080px;
 				margin: auto;
 				padding: 150px 33px;
 				height: 2800px;
-				.box{
+				.box {
 					width: 373px;
 					background-color: white;
 					border-radius: 22px;
 					padding: 2%;
 					box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
 				}
-				.left{
+				.left {
 					float: left;
 					clear: both;
 				}
-				.right{
-					float: right;
-					// clear: both;
+				.right {
+					float: right; // clear: both;
 				}
-				.p1{
+				.p1 {
 					width: 83px;
 					margin-left: 364px;
-    				margin-top: -78px;
-					img{
+					margin-top: -78px;
+					img {
 						width: 100%;
 					}
 				}
-				.p2{
+				.p2 {
 					width: 287px;
 					margin-left: 115px;
-					img{
+					img {
 						width: 100%;
 					}
 				}
-				.p3{
+				.p3 {
 					width: 374px;
 					margin-top: 140px;
-    				margin-right: 60px;
-					img{
+					margin-right: 60px;
+					img {
 						width: 100%;
 					}
 				}
-				.p4{
+				.p4 {
 					width: 432px;
 					margin-top: 190px;
-					img{
+					img {
 						width: 100%;
 					}
 				}
-				.p5{
+				.p5 {
 					width: 373px;
 					margin-top: -125px;
-					img{
+					img {
 						width: 100%;
 					}
 				}
-				.p6{
+				.p6 {
 					width: 369px;
 					margin-top: 145px;
-					img{
+					img {
 						width: 100%;
 					}
 				}
-				.p7{
+				.p7 {
 					width: 499px;
 					margin-top: 145px;
-					img{
+					img {
 						width: 100%;
 					}
 				}
-				.h3{
+				.h3 {
 					margin-top: 127px;
 				}
-				.h4{
+				.h4 {
 					margin-top: -85px;
 				}
-				.h5{
+				.h5 {
 					margin-top: 85px;
 				}
-				.h6{
+				.h6 {
 					margin-top: 170px;
 				}
-				.h7{
+				.h7 {
 					margin-top: -38px;
 				}
-				.h8{
+				.h8 {
 					margin-top: 107px;
 				}
-				.h9{
+				.h9 {
 					margin-top: 300px;
 				}
-				.h10{
+				.h10 {
 					margin-top: 190px;
 				}
-				.h11{
+				.h11 {
 					margin-top: 120px;
 				}
-				.h12{
+				.h12 {
 					margin-top: -180px;
 				}
 			}
 		}
-		#process{
+		#process {
 			display: none;
-			.content{
+			.content {
 				width: 920px;
 				margin: auto;
 				padding: 50px 0;
 				height: 2200px;
-				.left{
+				.left {
 					float: left;
 					margin-bottom: 175px;
 					clear: both;
 					box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
 				}
-				.right{
+				.right {
 					float: right;
 					margin-top: 145px;
 					box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
@@ -377,17 +466,3 @@ html{
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

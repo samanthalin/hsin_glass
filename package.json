@@ -1,23 +1,26 @@
 {
   "name": "hsin_glass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HsinChu glass intro",
-  "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=production parcel ./public/index.html",
+    "build": "cross-env NODE_ENV=production parcel build ./public/index.html --no-minify --public-url /"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samanthalin/hsin_glass.git"
   },
-  "author": "Edward Oo, Samantha Lin",
-  "license": "ISC",
+  "author": "ookangzheng, Samantha Lin",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/samanthalin/hsin_glass/issues"
   },
   "homepage": "https://github.com/samanthalin/hsin_glass#readme",
   "devDependencies": {
-    "node-static": "^0.7.9"
+    "cross-env": "^5.1.1"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "node-sass": "^4.7.2"
   }
 }

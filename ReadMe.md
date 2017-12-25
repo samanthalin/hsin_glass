@@ -1,14 +1,10 @@
 ## 新竹玻璃工藝之旅
 
-### Local Dev server
-1. With Node server installed
-2. Start with 
-    ```js 
-    node app
-    ```
-3. Dev server will start on port 8080
-
 網站: https://okz.io/project/hsinchu-glass-2017/
+
+1. Git clone 
+2. npm install
+3. npm run start 
 
 參考資料: 玻璃工藝博物館
 
