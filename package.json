@@ -4,7 +4,7 @@
   "description": "HsinChu glass intro",
   "scripts": {
     "start": "cross-env NODE_ENV=production parcel ./public/index.html",
-    "build": "cross-env NODE_ENV=production parcel build ./public/index.html --no-minify --public-url /"
+    "build": "cross-env NODE_ENV=production parcel build ./public/index.html --no-minify --public-url / -d build/output"
   },
   "repository": {
     "type": "git",
